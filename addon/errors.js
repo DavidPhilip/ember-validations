@@ -1,13 +1,13 @@
 import Ember from 'ember';
+import DS from 'ember-data';
 
 const {
   A: emberArray,
-  Object: EmberObject,
   get,
   set
 } = Ember;
 
-export default EmberObject.extend({
+export default DS.Errors.extend({
   unknownProperty(property) {
     set(this, property, emberArray());
     return get(this, property);
